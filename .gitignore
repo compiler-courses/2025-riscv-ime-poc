@@ -77,8 +77,12 @@ fabric.properties
 #cmake artefacts
 cmake-build-debug/*
 cmake-build*/*
+bin/*
 
 #vs code 
 .idea/ 
 .vscode
 .env
+
+
+build/*
