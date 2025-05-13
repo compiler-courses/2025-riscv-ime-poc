@@ -35,4 +35,6 @@ if [ -z "$SYSROOT" ]; then
 fi
 # $RISCV_QEMU -cpu rv64,v=true,g=true -L $SYSROOT 
 # Run the binary with QEMU
-$RISCV_QEMU -s 1G -R 2G -cpu rv64,v=true,g=true -L "$SYSROOT" "$BINARY" "$@"
+# $RISCV_QEMU -s 1G -R 2G -cpu rv64,v=true,g=true -L "$SYSROOT" "$BINARY" "$@"
+# $RISCV_QEMU -cpu rv64,v=true,g=true -L "$SYSROOT" "$BINARY" "$@"
+$RISCV_QEMU -s 4G -R 2G -cpu rv64,v=true,vlen=128,vext_spec=v1.0 -L "$SYSROOT" "$BINARY" "$@"

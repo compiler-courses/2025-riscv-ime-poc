@@ -83,6 +83,15 @@ bin/*
 .idea/ 
 .vscode
 .env
+.devbox
 
 
 build/*
+spacemit/*
+demo/*
+*.zip
+*.tar*
+./.sdk_wrappers
+dataset/*
+old-shell.nix
+shell.nix

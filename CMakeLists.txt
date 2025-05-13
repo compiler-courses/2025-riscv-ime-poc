@@ -29,7 +29,7 @@ set(CMAKE_CXX_FLAGS $ENV{CMAKE_CXX_FLAGS})
 set(CMAKE_ASM_FLAGS $ENV{CMAKE_ASM_FLAGS})
 
 # Static linking
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
 
 # Create main library
 add_library(matrix_mul

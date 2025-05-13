@@ -1,9 +1,20 @@
+#!/bin/bash
 # build CMake project for RISC-V
 set -e  # Exit on any error
 
+# Default build directory
+BUILD_DIR="build"
+
+# Check if an argument was provided for build directory
+if [ $# -eq 1 ]; then
+  BUILD_DIR="$1"
+fi
+
+echo "Using build directory: $BUILD_DIR"
+
 # Create build directory if it doesn't exist
-mkdir -p build
-cd build
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
 
 # Configure CMake
 cmake .. \

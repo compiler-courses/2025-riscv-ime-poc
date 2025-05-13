@@ -1,0 +1,44 @@
+{
+  "packages": {
+    "python":                      "3.8",
+    "python38Packages.setuptools": "latest",
+    "python38Packages.wheel":      "latest",
+    "python38Packages.virtualenv": "latest",
+    "cmake":                       "3.30.5",
+    "ninja":                       "1.12.1",
+    "gnumake":                     "4.4.1",
+    "patchelf":                    "0.15.0",
+    "stdenv.cc.cc.lib":            "",
+    "zlib": {
+      "version": "1.3.1",
+      "outputs": ["out", "dev", "static"]
+    },
+    "openssl": {
+      "version": "3.4.1",
+      "outputs": ["bin", "man", "debug", "dev", "doc", "out"]
+    },
+    "glibc": {
+      "version": "2.40-66",
+      "outputs": ["bin", "out", "debug", "dev", "getent", "static"]
+    },
+    "glib": {
+      "version": "2.82.5",
+      "outputs": ["bin", "debug", "dev", "devdoc", "out"]
+    }
+  },
+  "env": {
+    "VENV_DIR": ".env",
+    "SDK_PATH": "${PWD}/spacemit/spacemit-ai-sdk.v1.1.0"
+  },
+  "shell": {
+    "init_hook": [
+      ". $VENV_DIR/bin/activate",
+      "source scripts/init.sh"
+    ],
+    "scripts": {
+      "build_demo": "sh scripts/build.sh",
+      "qemu": "sh scripts/qemu_run.sh",
+      "clean_demo": "sh scripts/clean.sh"
+    }
+  }
+}
